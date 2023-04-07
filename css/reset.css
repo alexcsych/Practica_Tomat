@@ -96,6 +96,9 @@ h3 {
   border: 0;
   vertical-align: baseline;
 }
+a {
+  all: unset;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto+Slab:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,6 +20,14 @@ header {
 main {
   min-height: 2100px;
   text-align: center;
+}
+
+footer {
+  min-height: 127px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 400;
+  line-height: 142.7%;
 }
 
 .bg-image-header {
@@ -54,9 +63,12 @@ main {
 }
 
 .header-menu {
+  font-family: 'Heebo';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #324950;
   list-style-type: none;
-  /* display: flex;
-  justify-content: center; */
   gap: 15px;
 }
 
@@ -96,9 +108,6 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  /* justify-content: space-around; */
-  /* align-items: center; */
-  /* width: 1920px; */
   padding: 20px 0;
   min-height: 190px;
   font-style: normal;
@@ -183,10 +192,6 @@ main {
   padding-top: 75px;
   padding-bottom: 85px;
 }
-/* 
-.flex-container {
-  max-width: 350px;
-} */
 
 .flex-content img {
   width: 300px;
@@ -197,8 +202,6 @@ main {
 .main-section3-content {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* max-width: 1100px; */
   margin: 0 auto;
   gap: 10px;
 }
@@ -218,17 +221,53 @@ main {
   color: #324950;
 }
 
+.footer-contain1 {
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  background: #2d3f45;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.footer-nav-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-contain2 {
+  min-height: 51px;
+  display: flex;
+  background: #324950;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #b9b9b9;
+}
+
 @media (min-width: 952px) {
-  .main-section2-article {
-    display: flex;
+  .footer-contain1 {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 72px;
+  }
+
+  .footer-nav {
+    gap: 25px;
   }
 
   .main-section2-article {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .main-section2-article + .main-section2-article {

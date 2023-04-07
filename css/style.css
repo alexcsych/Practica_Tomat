@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  min-width: 320px;
+}
+
+header {
+  min-height: 850px;
+  text-align: center;
+}
+
+main {
+  min-height: 2100px;
+  text-align: center;
+}
+
+.bg-image-header {
+  position: absolute;
+  background: url(../images/homepage/header/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 850px;
+  z-index: -1;
+  /* opacity: 0.4; */
+}
+
+.header-icon {
+  padding-top: 20px;
+}
+
+.input-search {
+  all: unset;
+  /* width: 350px; */
+}
+
+.search-img {
+  border-bottom: 2px solid black;
+}
+
+.header-menu {
+  list-style-type: none;
+  /* display: flex;
+  justify-content: center; */
+  gap: 15px;
+}
+
+.header-search,
+.header-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header-content2 {
+  margin-top: 100px;
+}
+
+.header-content2-h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 142.7%;
+  color: #735440;
+  margin: 0 0 60px 0;
+}
+
+.header-content2-button {
+  width: 160px;
+  height: 55px;
+  background-color: #57984c;
+  border: none;
+  color: white;
+  padding: 16px 31px;
+  text-decoration: none;
+  font-family: 'Roboto';
+}
+
+.main-section1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* width: 1920px; */
+  padding: 20px 0;
+  min-height: 190px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142.7%;
+}
+
+.flex-container {
+  max-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main-section2 {
+  padding: 71px 10px 100px 10px;
+  min-height: 1100px;
+  width: 100%;
+  /* background-color: black; */
+  background-color: #f7f7f7;
+}
+
+.bg-image-main {
+  background: url(../images/homepage/main/section2/Union.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1100px;
+}
+
+.content-flex {
+  min-height: 1100px;
+  max-width: 1100px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.main-section2-article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.article-content {
+  width: 300px;
+}
+
+.article-img {
+  object-fit: cover;
+  max-width: 540px;
+  width: 100%;
+}
+
+.article-h3 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 142.7%;
+  color: #324950;
+}
+
+.p-start {
+  padding: 10px 0;
+  color: #57984c;
+}
+
+.article-p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 162.7%;
+  color: #324950;
+}
+
+.main-section3 {
+  background-color: #e5e5e5;
+  min-height: 640px;
+}
+
+@media (min-width: 952px) {
+  .main-section2-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 72px;
+  }
+
+  .main-section2-article {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .main-section2-article + .main-section2-article {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-content {
+    width: 495px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .article-p {
+    text-align: start;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 162.7%;
+    color: #324950;
+  }
+
+  .header-content1 {
+    max-width: 1127px;
+    width: 100%;
+    height: 113px;
+    padding-top: 20px;
+    margin: 0 auto 229px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-icon {
+    padding: 0;
+  }
+
+  .header-content1-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  .input-search {
+    width: 350px;
+  }
+
+  .header-search {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -77,6 +77,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .header-content2 {
@@ -219,6 +220,7 @@ footer {
   font-size: 18px;
   line-height: 142.7%;
   color: #324950;
+  margin: 0 auto;
 }
 
 .footer-contain1 {
@@ -268,6 +270,7 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 72px;
   }
 
   .main-section2-article + .main-section2-article {
@@ -308,6 +311,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 10px;
   }
 
   .header-menu {

@@ -90,19 +90,6 @@ main {
   color: #324950;
 }
 
-/* .main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1024px 1fr;
-  grid-template-areas:
-    'A B1 B1 B1 E'
-    'A B2 B2 B2 E'
-    'A B3 C3 D3 E'
-    'A B4 B4 B4 E'
-    'A B5 C5 D5 E'
-    'A B6 C6 D6 E'
-    'A B7 C7 D7 E';
-} */
-
 main > div {
   grid-area: B;
   text-align: start;
@@ -112,9 +99,6 @@ main > div {
   padding: 40px 0;
   color: #57984c;
 }
-
-/* .main-content {
-} */
 
 .main-content-h1 {
   font-weight: 700;
@@ -140,6 +124,80 @@ strong {
   margin-bottom: 30px;
 }
 
+.main-content-columns-3 + .border-left-red {
+  margin: 40px 0;
+}
+
+.main-content-columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.border-black {
+  border-bottom: 1px solid #324950;
+  margin: 15px 0;
+}
+
+.grid-container-columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+  text-align: center;
+  color: #57984c;
+}
+
+.grid-container-columns-3 > div:nth-child(1) {
+  background: url(../images/tomato_all/main/image1.png);
+}
+
+.grid-container-columns-3 > div:nth-child(2) {
+  background: url(../images/tomato_all/main/image2.png);
+}
+
+.grid-container-columns-3 > div:nth-child(3) {
+  background: url(../images/tomato_all/main/image3.png);
+}
+
+.grid-container-columns-3 > div:nth-child(4) {
+  background: url(../images/tomato_all/main/image4.png);
+}
+
+.grid-container-columns-3 > div:nth-child(5) {
+  background: url(../images/tomato_all/main/image5.png);
+}
+
+.grid-container-columns-3 > div:nth-child(6) {
+  background: url(../images/tomato_all/main/image6.png);
+}
+
+.grid-container-columns-3 > div:nth-child(7) {
+  background: url(../images/tomato_all/main/image7.png);
+}
+
+.grid-container-columns-3 > div:nth-child(8) {
+  background: url(../images/tomato_all/main/image8.png);
+}
+
+.grid-container-columns-3 > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.grid-container-columns-3 > div > div {
+  min-height: 90px;
+  padding: 5px;
+  background-color: white;
+}
 /* main-end */
 
 /* footer */

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Roboto+Slab:wght@300;400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -175,7 +174,7 @@ footer {
   color: #324950;
 }
 
-.p-start {
+.p-star {
   padding: 10px 0;
   color: #57984c;
 }

@@ -90,10 +90,6 @@ header {
   height: 480px;
 }
 
-.shadow {
-  box-shadow: 0 5px 5px black;
-}
-
 .header-content2 {
   margin-top: 200px;
 }
@@ -335,6 +331,7 @@ strong {
   justify-content: flex-end;
 }
 
+.grid-container-columns-3 > div > a > div,
 .grid-container-columns-3 > div > div {
   min-height: 90px;
   padding: 5px;
@@ -379,6 +376,163 @@ strong {
   margin: 0 auto;
 }
 
+.shadow {
+  box-shadow: 0 0 30px rgb(119, 119, 119);
+}
+
+.grid-columns4 {
+  min-height: 1200px;
+  margin-top: 30px;
+
+  background-color: #f7f7f7;
+  background-image: url(../images/tomato_one/Union.png);
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 512px) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: start;
+  grid-template-areas:
+    'A B C D'
+    'A B1 C1 D';
+  text-align: left;
+}
+
+.grid-columns2-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 10px;
+}
+
+.grid-columns4 > div:nth-child(1) {
+  grid-area: B;
+}
+
+.grid-columns4 > div:nth-child(2) {
+  grid-area: B1;
+}
+
+.grid-columns4 > div:nth-child(3) {
+  grid-area: C1;
+}
+
+.grid-columns4 > div:nth-child(4) {
+  grid-area: C;
+  padding-top: 40px;
+}
+
+.arrow > a {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 162.7%;
+  color: #57984c;
+}
+
+.arrow img {
+  object-fit: contain;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 142.7%;
+  color: #324950;
+}
+
+.green {
+  color: #57984c;
+}
+
+.tomate-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 142.7%;
+  color: #cf2333;
+}
+
+.border-bottom-green {
+  margin: 10px 0 20px;
+  width: 183px;
+  border-bottom: 1px solid #57984c;
+}
+
+.section3-p + .border-bottom-green {
+  margin: 10px auto;
+}
+
+.tomate-icon + div,
+.list,
+.p-in-list {
+  font-size: 17px;
+  line-height: 162.7%;
+  color: #324950;
+}
+
+.grid-columns2-ul {
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.name-ul-green {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 142.7%;
+  color: #57984c;
+}
+
+.list {
+  list-style-type: disc;
+  color: #57984c;
+  padding-left: 20px;
+}
+
+.list > li > div {
+  color: #324950;
+}
+
+.ul-container {
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-PDF-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+.btn-PDF {
+  margin-top: 30px;
+  display: flex;
+  padding: 10px 30px 10px 30px;
+  border-radius: 40px;
+  border: 2.5px solid #57984c;
+  cursor: pointer;
+}
+
+.btn-PDF > p {
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+  font-size: 17px;
+  color: #57984c;
+}
 /* main-end */
 
 /* footer */
@@ -441,7 +595,8 @@ footer {
   }
 
   .grid,
-  .nav-container {
+  .nav-container,
+  .grid-columns4 {
     display: block;
   }
 
@@ -478,6 +633,15 @@ footer {
   .main-section3-content {
     flex-direction: column;
   }
+
+  .tomate-icon + div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .grid-columns2-ul > div {
+    margin-left: 30px;
+  } */
 }
 
 @media (max-width: 768px) {

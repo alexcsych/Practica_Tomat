@@ -128,13 +128,15 @@
         </div>
         <div id="app" class="grid-container-columns-3">
           <div v-if="products" v-for="p in products">
-            <div>
-              <img :src="'./images/tomato_all/'+p.image" alt="eggplant" />
-              <div>
-                <h3>{{ p.title }}</h3>
-                <p>{{ p.short_text }}</p>
-              </div>
-            </div>
+            <a href="./Tomato_one.html">
+              <div class="productsItems">
+                <img :src="'./images/tomato_all/'+p.image" alt="cucumber" />
+                <div class="productInfo">
+                  <h3>{{ p.title }}</h3>
+                  <p>{{ p.short_text }}</p>
+                </div>
+              </div></a
+            >
           </div>
         </div>
       </div>

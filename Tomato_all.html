@@ -7,6 +7,11 @@
     <title>Tomato all</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"
+    ></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <header>
@@ -35,7 +40,7 @@
     </header>
     <main class="grid main-tomat-all">
       <div>
-        <h1 class="main-content-h1">Agridera Fresh Market Tomato Hybrids</h1>
+        <h1 class="main-content-h1">Agridera Fresh Market Сucumbers Hybrids</h1>
         <p class="p-star">*****</p>
         <div class="main-content-flex-p">
           <p>
@@ -121,55 +126,14 @@
             >
           </p>
         </div>
-        <div class="grid-container-columns-3">
-          <div>
+        <div id="app" class="grid-container-columns-3">
+          <div v-if="products" v-for="p in products">
             <div>
-              <h3>TAG 1000 (TAG 853)</h3>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1001 (TAG 855)</h3>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </div>
-          <div>
-            <a href="./Tomato_one.html"
-              ><div>
-                <h3>TAG 1002 (TAG 809)</h3>
-                <p>Tomato Determinate Red Standard Round</p>
-              </div></a
-            >
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1003 (TAG 834 )</h3>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1004 (TAG 848)</h3>
-              <p>Tomato Determinate Red BEEF Round</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1005 (TAG 800)</h3>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1006 (TAG 898)</h3>
-              <p>Tomato Determinate Red Elongated</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <h3>TAG 1007 (TAG 816)</h3>
-              <p>Tomato Determinate Red Elongated</p>
+              <img :src="'./images/tomato_all/'+p.image" alt="eggplant" />
+              <div>
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.short_text }}</p>
+              </div>
             </div>
           </div>
         </div>

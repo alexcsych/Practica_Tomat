@@ -102,7 +102,7 @@
           <div>
             <p>You are a</p>
             <select name="select" v-model="contactFields.select">
-              <option value="value">seed producer</option>
+              <option>seed producer</option>
             </select>
             <p>If other, please specify</p>
             <input type="text" name="other" />
@@ -116,15 +116,23 @@
           </div>
         </form>
         <div v-if="order==1">
-          Thank You
+          <h3>Thank You</h3>
           <p>Name: {{ contactFields.name }}</p>
-          <p>Company Name: {{ contactFields.company_name }}</p>
-          <p>Position: {{ contactFields.position }}</p>
-          <p>City: {{ contactFields.city }}</p>
-          <p>Country: {{ contactFields.country }}</p>
-          <p>Telephone: {{ contactFields.telephone }}</p>
+          <p v-if="contactFields.company_name">
+            Company Name: {{ contactFields.company_name }}
+          </p>
+          <p v-if="contactFields.position">
+            Position: {{ contactFields.position }}
+          </p>
+          <p v-if="contactFields.city">City: {{ contactFields.city }}</p>
+          <p v-if="contactFields.country">
+            Country: {{ contactFields.country }}
+          </p>
+          <p v-if="contactFields.telephone">
+            Telephone: {{ contactFields.telephone }}
+          </p>
           <p>Email: {{ contactFields.email }}</p>
-          <p>Select: {{ contactFields.select }}</p>
+          <p v-if="contactFields.select">Select: {{ contactFields.select }}</p>
         </div>
         <div class="address-content">
           <p class="name-ul-green">Our Address</p>

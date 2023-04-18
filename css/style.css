@@ -743,10 +743,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
-
-  /* .grid-columns2-ul > div {
-    margin-left: 30px;
-  } */
 }
 
 @media (max-width: 768px) {

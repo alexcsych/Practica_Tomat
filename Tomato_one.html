@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomato one</title>
+    <title>Сucumber one</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <header class="shadow">
@@ -33,16 +34,16 @@
         </div>
       </nav>
     </header>
-    <main class="grid-columns4">
+    <main class="grid-columns4" id="app">
       <div class="grid-columns2-content">
         <div class="arrow">
           <a href="./Tomato_all.html">
             <img src="./images/tomato_one/Arrow.png" alt="Arrow" />
-            <p>Return to all tomatoes</p></a
+            <p>Return to all cucumbers</p></a
           >
         </div>
-        <h2 class="h2">TAG 1002 (TAG 809)</h2>
-        <h2 class="h2 green">Tomato Determinate Red Standard Round</h2>
+        <h2 class="h2">{{ product.title }}</h2>
+        <h2 class="h2 green">{{ product.short_text }}</h2>
         <p class="p-star">*****</p>
         <div class="tomate-icon">
           <img src="./images/tomato_one/image1.png" alt="tomate-icon" />
@@ -51,9 +52,9 @@
         <div class="ul-container">
           <p class="name-ul-green">CHARACTERISTICS</p>
           <div class="border-bottom-green"></div>
-          <p><strong>Resistance</strong></p>
-          <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd;</p>
-          <p>IR: TYLCV</p>
+          <p>{{ product.desc }}</p>
+          <!-- <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd;</p>
+          <p>IR: TYLCV</p> -->
         </div>
       </div>
       <div class="grid-columns2-ul">
@@ -93,12 +94,20 @@
         </div>
       </div>
       <div class="grid-columns2-content">
-        <img src="./images/tomato_all/image3.png" alt="image3" />
+        <img :src="'./images/tomato_all/'+product.image" alt="cucumber" />
         <div class="btn-PDF-container">
-          <div class="btn-PDF">
-            <img src="./images/tomato_one/ico_pdf.png" alt="ico_pdf" />
-            <p>Download pdf</p>
-          </div>
+          <a href="#" @click.prevent="addToCart(product.id)" v-if="!btnVisible">
+            <div class="btn-PDF">
+              <p>Add to cart</p>
+            </div></a
+          >
+        </div>
+        <div class="btn-PDF-container">
+          <a href="./Contact_us.html" v-if="btnVisible">
+            <div class="btn-PDF">
+              <p>Go to cart</p>
+            </div></a
+          >
         </div>
       </div>
     </main>

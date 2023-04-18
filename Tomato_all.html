@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tomato all</title>
+    <title>Сucumbers all</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script
@@ -128,7 +128,7 @@
         </div>
         <div id="app" class="grid-container-columns-3">
           <div v-if="products" v-for="p in products">
-            <a href="./Tomato_one.html">
+            <a :href="'./Tomato_one.html#'+p.id">
               <div class="productsItems">
                 <img :src="'./images/tomato_all/'+p.image" alt="cucumber" />
                 <div class="productInfo">

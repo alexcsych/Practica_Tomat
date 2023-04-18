@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <header>
@@ -34,30 +35,74 @@
       <div class="bg-contact-us"></div>
     </header>
     <main class="grid main-contact-us">
-      <div>
+      <div id="app">
         <h1 class="main-content-h1">Contact us</h1>
         <p class="p-star">*****</p>
-        <form>
+        <table v-if="cart!=''">
+          <tr>
+            <th>Image</th>
+            <th>Product name</th>
+            <th class="td-info">Info</th>
+            <th>Options</th>
+          </tr>
+          <tr v-for="c in cart">
+            <td>
+              <img :src="'./images/tomato_all/'+c.image" alt="cucumber" />
+            </td>
+            <td>{{ c.title }}</td>
+            <td class="td-info">{{ c.short_text }}</td>
+            <td>
+              <a href="#" @click.prevent="removeFromCart(c.id)">X</a>
+            </td>
+          </tr>
+        </table>
+        <form
+          action="Contact_us.html"
+          @submit.prevent="makeOrder()"
+          v-if="order==0"
+        >
           <div>
             <p>Name *</p>
-            <input type="text" name="name" required />
+            <input
+              type="text"
+              name="name"
+              v-model="contactFields.name"
+              required
+            />
             <p>Company Name</p>
-            <input type="text" name="company-name" />
+            <input
+              type="text"
+              name="company-name"
+              v-model="contactFields.company_name"
+            />
             <p>Position</p>
-            <input type="text" name="position" />
+            <input
+              type="text"
+              name="position"
+              v-model="contactFields.position"
+            />
             <p>City</p>
-            <input type="text" name="city" />
+            <input type="text" name="city" v-model="contactFields.city" />
             <p>Country</p>
-            <input type="text" name="country" />
+            <input type="text" name="country" v-model="contactFields.country" />
             <p>Telephone</p>
-            <input type="text" name="telephone" />
+            <input
+              type="text"
+              name="telephone"
+              v-model="contactFields.telephone"
+            />
             <p>Email *</p>
-            <input type="text" name="email" required />
+            <input
+              type="text"
+              name="email"
+              v-model="contactFields.email"
+              required
+            />
           </div>
           <div>
             <p>You are a</p>
-            <select name="select">
-              <option value="value1" selected>seed producer</option>
+            <select name="select" v-model="contactFields.select">
+              <option value="value">seed producer</option>
             </select>
             <p>If other, please specify</p>
             <input type="text" name="other" />
@@ -65,12 +110,22 @@
             <textarea name="message" rows="20" cols="40"></textarea>
             <p>Please type this code</p>
             <div class="form-sumbit">
-              <img src="./images/contact_us/image1.png" alt="capcha" />
               <input class="input-sumbit" type="text" />
               <button class="btn-sumbit" type="submit">Send Message</button>
             </div>
           </div>
         </form>
+        <div v-if="order==1">
+          Thank You
+          <p>Name: {{ contactFields.name }}</p>
+          <p>Company Name: {{ contactFields.company_name }}</p>
+          <p>Position: {{ contactFields.position }}</p>
+          <p>City: {{ contactFields.city }}</p>
+          <p>Country: {{ contactFields.country }}</p>
+          <p>Telephone: {{ contactFields.telephone }}</p>
+          <p>Email: {{ contactFields.email }}</p>
+          <p>Select: {{ contactFields.select }}</p>
+        </div>
         <div class="address-content">
           <p class="name-ul-green">Our Address</p>
           <div class="border-bottom-green"></div>

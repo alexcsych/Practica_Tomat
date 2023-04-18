@@ -144,7 +144,6 @@ header {
 .main-contact-us {
   padding: 50px 0 0;
   background-color: #f7f7f7;
-  min-height: 1024px;
 }
 
 .main-tomat-all > div,
@@ -393,7 +392,7 @@ strong {
   flex-direction: column;
 
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 20px;
 }
 
 .grid-columns4 > div:nth-child(1) {
@@ -507,22 +506,22 @@ strong {
 .btn-PDF-container {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 40px;
 }
 
 .btn-PDF {
-  margin-top: 30px;
   display: flex;
-  padding: 10px 30px 10px 30px;
+
+  margin-top: 30px;
+  padding: 10px 30px;
   border-radius: 40px;
   border: 2.5px solid #57984c;
-  cursor: pointer;
 }
 
 .btn-PDF > p {
   display: flex;
-  padding-left: 20px;
   align-items: center;
+
+  /* padding-left: 20px; */
   font-size: 17px;
   color: #57984c;
 }
@@ -598,13 +597,41 @@ form textarea {
   flex-direction: column;
   align-items: center;
 
-  background-color: #ffffff;
   padding: 44px 0;
 }
 
 .address-content a {
   color: #57984c;
 }
+
+table {
+  margin: 0 auto;
+}
+
+table + form {
+  padding: 50px 0;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+td > img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+
+  max-width: 100px;
+  max-height: 100px;
+}
+
 /* main-end */
 
 /* footer */
@@ -753,5 +780,9 @@ footer {
 @media (max-width: 425px) {
   .header-content2 {
     margin-top: 50px;
+  }
+
+  .td-info {
+    display: none;
   }
 }

@@ -1,10 +1,11 @@
 {
-  "name": "Мій PWA додаток",
-  "short_name": "Мій PWA",
+  "name": "Agrideria Web App",
+  "short_name": "Agrideria",
+  "description": "Agrideria Web App",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#007bff",
+  "background_color": "#f7f98f",
+  "theme_color": "#f7f98f",
   "icons": [
     {
       "src": "images/icon/app-icon-48x48.png",
@@ -42,7 +43,6 @@
       "type": "image/png"
     }
   ],
-  "description": "Мій PWA додаток",
   "lang": "uk-UA",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,

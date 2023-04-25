@@ -22,3 +22,7 @@ self.addEventListener('fetch', function (event) {
     })
   )
 })
+self.addEventListener('push', event => {
+  const notification = 'HELLO WORLD!'
+  self.registration.showNotification(notification, {})
+})

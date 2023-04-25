@@ -9,10 +9,36 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <link rel="manifest" href="manifest.json" />
-    <script>
+    <script defer>
+      function askPermission() {
+        return new Promise((resolve, reject) => {
+          const permissionResult = Notification.requestPermission(result => {
+            resolve(result)
+          })
+
+          if (permissionResult) {
+            permissionResult.then(resolve, reject)
+          }
+        }).then(permissionResult => {
+          if (permissionResult !== 'granted') {
+            throw new Error("We weren't granted permission.")
+          }
+        })
+      }
+
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(function () {
+        navigator.serviceWorker.register('/sw.js').then(() => {
           console.log('Service worker registered!')
+        })
+
+        navigator.serviceWorker.ready.then(registration => {
+          if ('PushManager' in window) {
+            document
+              .querySelector('button.subscribe-for-push')
+              .addEventListener('click', () => {
+                askPermission()
+              })
+          }
         })
       }
     </script>
@@ -163,6 +189,9 @@
             </p>
           </div>
         </div>
+        <button class="subscribe-for-push">
+          SUBSCRIBE FOR PUSH NOTIFICATIONS
+        </button>
       </section>
     </main>
     <footer>
